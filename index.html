@@ -44,30 +44,48 @@
          Write a function for adding a new item in the second list.
          */
   
-        const addToTheSecond = function (content) {
+        c/* onst addToTheSecond = function (content) {
             let newElement = document.addToTheSecond("th")
             newElement.innerHTML = "4th"
             newElement.id = "secondList"
             document.getElementById("secondList").appendChild(newElement)
             document.querySelector("ul").add
-        
+         */
 
           //
-        };
+        //};
+        /* function addNewListItem(){
+            const node = document.querySelector("#secondlist")
+            const textnode = document.createTextNode("4th")
+           node.appendChild(textnode)
+           document.getElementById("secondlist").appendChild(node)
+         } */
+         function addNewListItem(){
+
+            const secondList = document.getElementById('secondList')
+            const newElement = document.createElement('li')
+
+            newElement.innerText='4th'
+            secondList.appendChild(newElement)
+
+
+            return newElement
+        }
   
         /* EXERCISE 6
         Write a function for adding a second paragraph to the div.
 
         */
   
-        /* const addParagraph = function (content) {
-             document.createElement("p");
-            const node = document.createTextNode("This is new.");
-            addParagraph.appendChild(node);
-            const element = document.getElementById("div1");
-            element.appendChild(addParagraph); */
+         const addParagraph = function (content) {
+            const secondParagraph = document.querySelector("div")
+            const newElement = document.createElement('p')
+
+            newElement.innerText='This is new'
+            secondParagraph.appendChild(newElement)
+            return newElement
           //
-       // };
+        };
        const para = document.createElement("p")
 const node = document.createTextNode("This is new.")
 para.appendChild(node)
@@ -148,13 +166,13 @@ element.appendChild(para)
       <main>
         <hr />
   
-        <ul id="firstList" onclick=paintItGreen()>
+        <ul id="firstList" onclick=addNewListItem()>
           <li>1st</li>
           <li>2nd</li>
           <li>3rd</li>
         </ul>
   
-        <ul id="secondList" onclick=addToTheSecond()>
+        <ul id="secondList" onclick=addNewListItem()()>
           <li>1st</li>
           <li>2nd</li>
           <li>3rd</li>
@@ -162,8 +180,8 @@ element.appendChild(para)
   
         <a href="strive.school" onclick=changeUrls()>This link goes to Strive School</a>
   
-        <div id="div1">
-            <button onclick=para()>add</button>
+        <div >
+            <button onclick=addParagraph()>add</button>
           <p onclick=changePcontent()>This text is just for the exercise</p>
         </div>
   

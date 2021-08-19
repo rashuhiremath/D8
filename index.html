@@ -77,15 +77,7 @@
 
         */
   
-         const addParagraph = function (content) {
-            const secondParagraph = document.querySelector("div")
-            const newElement = document.createElement('p')
-
-            newElement.innerText='This is new'
-            secondParagraph.appendChild(newElement)
-            return newElement
-          //
-        };
+         
        const para = document.createElement("p")
 const node = document.createTextNode("This is new.")
 para.appendChild(node)
@@ -139,11 +131,8 @@ element.appendChild(para)
         /* EXERCISE 12
         Create a new welcome alert message when the page successfully loads.
         */
-  
-        window.onload = function () {
-            alert("Welcome")
-          //
-        };
+        
+        
   
         /* EXERCISE 13
         Use HTML5 tags to divide the content of the page in a more semantic way.
@@ -198,5 +187,14 @@ element.appendChild(para)
         <p>And this text is just for the exercise too!</p>
       </footer>
     </body>
+    <script>
+        window.onload = function () {
+            alert("Welcome")
+          //
+        };
+        window.onload()
+        
+    </script>
+    
   </html>
   
